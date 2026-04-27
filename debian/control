@@ -1,0 +1,115 @@
+Source: util-dfm
+Section: libs,utils
+Priority: optional
+Maintainer: Deepin Packages Builder <packages@linuxdeepin.com>
+Build-Depends:
+ debhelper (>=9),
+ cmake,
+ pkg-config,
+ qt6-base-dev | qtbase5-dev,
+ qt6-base-private-dev | qtbase5-private-dev,
+ libdtk6core-dev | libdtkcore-dev,
+ libglibmm-2.4-dev,
+ qt6-tools-dev-tools | qttools5-dev-tools,
+ libglib2.0-dev,
+ libudisks2-dev,
+ libisoburn-dev,
+ libmediainfo-dev,
+ libsecret-1-dev,
+ liblucene++-dev,
+ libboost-filesystem-dev,
+ libboost-system-dev
+Standards-Version: 4.3.0
+Homepage: http://www.deepin.org
+#Vcs-Browser: https://salsa.debian.org/debian/util-dfm
+#Vcs-Git: https://salsa.debian.org/debian/util-dfm.git
+
+Package: libdfm6-io
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libglibmm-2.4-1v5
+Description: A library about I/O.
+ A library that provides I/O interface.
+
+Package: libdfm6-io-dev
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libdfm6-io (=${binary:Version})
+Description: A library about I/O dev.
+ A library that provides I/O interface dev.
+
+Package: libdfm6-mount
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: A library about mount and umount.
+ A library that provides mount and umount interface.
+
+Package: libdfm6-mount-dev
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libdfm6-mount (=${binary:Version}),
+ libsecret-1-dev,
+ libudisks2-dev
+Description: A library about mount and umount dev.
+ A library that provides mount and umount interface dev.
+
+Package: libdfm6-burn
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Recommends:
+ libudfburn
+Description: A library about burning CD.
+ A library that provides burning CD interface.
+
+Package: libdfm6-burn-dev
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libdfm6-burn (=${binary:Version}),
+ libisoburn-dev
+Description: A library about mount burning CD.
+ A library that provides burning CD interface dev.
+
+Package: libdfm6-search
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: A library about searching files.
+ A library that provides file searching interface.
+
+Package: libdfm6-search-dev
+Architecture: any
+Section: libdevel
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libdfm6-search (=${binary:Version})
+Description: A library about searching files dev.
+ A library that provides file searching interface dev.
