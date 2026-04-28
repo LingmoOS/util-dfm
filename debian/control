@@ -1,7 +1,7 @@
 Source: util-dfm
 Section: libs,utils
 Priority: optional
-Maintainer: Deepin Packages Builder <packages@linuxdeepin.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends:
  debhelper (>=9),
  cmake,
@@ -21,8 +21,8 @@ Build-Depends:
  libboost-system-dev
 Standards-Version: 4.3.0
 Homepage: http://www.deepin.org
-#Vcs-Browser: https://salsa.debian.org/debian/util-dfm
-#Vcs-Git: https://salsa.debian.org/debian/util-dfm.git
+#Vcs-Browser: https://github.com/LingmoOS/util-dfm/
+#Vcs-Git: https://github.com/LingmoOS/util-dfm.git
 
 Package: libdfm6-io
 Architecture: any
