@@ -16,17 +16,17 @@ MAJOR_VERSION := $(shell if [ -f $(OS_VERSION_FILE) ]; then \
 USE_QT6 := $(shell if [ "$(MAJOR_VERSION)" -gt 20 ] 2>/dev/null; then echo yes; else echo no; fi)
 
 # 设置 QT_SELECT 环境变量
-ifeq ($(USE_QT6),yes)
-    export QT_SELECT=6
-    QT_SUFFIX := 6
-else
-    export QT_SELECT=5
-    QT_SUFFIX :=
-endif
+# ifeq ($(USE_QT6),yes)
+#     export QT_SELECT=6
+#     QT_SUFFIX := 6
+# else
+#     export QT_SELECT=5
+#     QT_SUFFIX :=
+# endif
 
-# 从 control.in 生成 control 文件
-$(shell sed -e 's/@QT_SUFFIX@/$(QT_SUFFIX)/g' \
-            debian/control.in > debian/control)
+# # 从 control.in 生成 control 文件
+# $(shell sed -e 's/@QT_SUFFIX@/$(QT_SUFFIX)/g' \
+#             debian/control.in > debian/control)
 
 %:
 	dh $@ --parallel
